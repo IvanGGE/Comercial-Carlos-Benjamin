@@ -7,8 +7,8 @@ public class Productos {
     private String codigo_serial;
     private String nombre;
     private String descripcion;
-    private BigDecimal precio_compra; //<-- REVISAR DESPUES
-    private BigDecimal precio_venta_unitario; //<-- REVISAR DESPUES
+    private BigDecimal precio_compra;
+    private BigDecimal precio_venta_unitario;
     private BigDecimal precio_venta_mayorista;
     private int iva;
     private int stock;
