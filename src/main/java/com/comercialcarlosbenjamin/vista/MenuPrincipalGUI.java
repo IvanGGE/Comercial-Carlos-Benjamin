@@ -18,7 +18,9 @@ public class MenuPrincipalGUI extends javax.swing.JFrame {
     public MenuPrincipalGUI() {
         initComponents();
     }
-
+    public javax.swing.JPanel getPanelPrincipal() {
+        return panelPrincipal;
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -28,29 +30,66 @@ public class MenuPrincipalGUI extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
+        panelPrincipal = new javax.swing.JPanel();
+        jMenuBar = new javax.swing.JMenuBar();
+        menuInicio = new javax.swing.JMenu();
+        itemInicio = new javax.swing.JMenuItem();
+        menuUsuarios = new javax.swing.JMenu();
+        itemAgregarUsuario = new javax.swing.JMenuItem();
+        menuProductos = new javax.swing.JMenu();
+        itemAgregarProducto = new javax.swing.JMenuItem();
+        menuVentas = new javax.swing.JMenu();
+        itemVender = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setLocation(new java.awt.Point(0, 0));
 
-        jLabel1.setBackground(new java.awt.Color(0, 0, 0));
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("MENU PRINCIPAL");
-        jLabel1.setOpaque(true);
+        panelPrincipal.setLayout(new java.awt.CardLayout());
+
+        menuInicio.setText("Inicio");
+
+        itemInicio.setText("Ir a Inicio");
+        menuInicio.add(itemInicio);
+
+        jMenuBar.add(menuInicio);
+
+        menuUsuarios.setText("Usuarios");
+
+        itemAgregarUsuario.setText("Agregar Nuevo Usuario");
+        menuUsuarios.add(itemAgregarUsuario);
+
+        jMenuBar.add(menuUsuarios);
+
+        menuProductos.setText("Productos");
+
+        itemAgregarProducto.setText("Agregar Producto");
+        itemAgregarProducto.setToolTipText("");
+        menuProductos.add(itemAgregarProducto);
+
+        jMenuBar.add(menuProductos);
+
+        menuVentas.setText("Ventas");
+
+        itemVender.setText("Vender");
+        menuVentas.add(itemVender);
+
+        jMenuBar.add(menuVentas);
+
+        setJMenuBar(jMenuBar);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 600, Short.MAX_VALUE)
+            .addComponent(panelPrincipal, javax.swing.GroupLayout.DEFAULT_SIZE, 800, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 250, Short.MAX_VALUE))
+            .addComponent(panelPrincipal, javax.swing.GroupLayout.DEFAULT_SIZE, 600, Short.MAX_VALUE)
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     /**
@@ -79,6 +118,15 @@ public class MenuPrincipalGUI extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabel1;
+    public javax.swing.JMenuItem itemAgregarProducto;
+    public javax.swing.JMenuItem itemAgregarUsuario;
+    public javax.swing.JMenuItem itemInicio;
+    public javax.swing.JMenuItem itemVender;
+    public javax.swing.JMenuBar jMenuBar;
+    public javax.swing.JMenu menuInicio;
+    public javax.swing.JMenu menuProductos;
+    private javax.swing.JMenu menuUsuarios;
+    public javax.swing.JMenu menuVentas;
+    public javax.swing.JPanel panelPrincipal;
     // End of variables declaration//GEN-END:variables
 }
